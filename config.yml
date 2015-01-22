@@ -1,0 +1,33 @@
+---
+redis-base-conf:  redis_base.conf
+redis-file-path:  /Users/blaplanche/workspace/redis-cluster/redis
+cluster-file-path:  /Users/blaplanche/workspace/redis-cluster
+nodes:
+  - node: node-1
+    ip: localhost
+    port: 7001
+  - node: node-2
+    ip: localhost
+    port: 7002
+  - node: node-3
+    ip: localhost
+    port: 7003
+  - node: node-4
+    ip: localhost
+    port: 7004
+  - node: node-5
+    ip: localhost
+    port: 7005
+  - node: node-6
+    ip: localhost
+    port: 7006
+layout:
+  - master: node-1
+    slaves:
+    - node-2
+  - master: node-3
+    slaves:
+    - node-4
+  - master: node-5
+    slaves:
+    - node-6  

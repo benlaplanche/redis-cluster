@@ -1,0 +1,3 @@
+*.tar.gz
+cluster-test
+redis-3*
